@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Best-Friend ❤️ Anjali💖</title>
+  <title>Manu❤️Xettri💖</title>
   <style>
     html, body {
       height: 100%;
@@ -91,9 +91,6 @@
     button:hover {
       background: #ff85c1;
     }
-    
- 
-    
 
     #secretMessage {
       display: none;
@@ -143,7 +140,6 @@
       p.love-message {
         font-size: 1rem;
       }
-
       button {
         padding: 0.7rem 1.2rem;
         font-size: 0.9rem;
@@ -159,17 +155,29 @@
 
   <div class="container" role="main">
     <div class="heart" aria-hidden="true">❤️</div>
-    <h1>For My Beautiful Best-Friend Anjali !!</h1>
+    <h1>For My Beautiful Love-Manu!!💖</h1>
     <h2>Cuitee 🥰💛</h2> 
     <p class="love-message">
-      Every moment with you is a gift. This little website is just a tiny way to say how much deep our Friendship💛.
-      
+      Every moment with you is a gift. This little website is just a tiny way to say how much deep our Love💝
     </p>
 
     <div class="photo-gallery" aria-label="Photo gallery of Anjali and friendship moments">
-      <img src="https://i.postimg.cc/sXb94vyh/IMG-20240602-WA0015.jpg" class="active" alt="Photo 1 of Anjali" />
-      <img src="https://i.postimg.cc/T2WcYqqq/IMG-20240530-190917-759.jpg" alt="Photo 2 of Anjali" />
-      <img src="https://i.postimg.cc/d0x8JLhx/IMG-20240530-190920-496.jpg" alt="Photo 3 of Anjali" />
+      <img src="https://i.postimg.cc/ZK3msK6t/Screenshot-20250609-145216-2.png" class="active" alt="Photo 1 of Anjali" />
+      <img src="https://i.postimg.cc/pV3xBnhJ/Screenshot-20250609-145225-2.png" alt="Photo 2 of Anjali" />
+      <img src="https://i.postimg.cc/nrKXJKNB/1749460091793-2.jpg" alt="Photo 3 of Anjali" />
+      <img src="https://i.postimg.cc/sXYWjRhM/1749460040862-2.jpg" alt="Photo 4 of Anjali" />
+      <img src="https://i.postimg.cc/5yfCjkBn/1749460058022-2.jpg" alt="Photo 5 of Anjali" />
+      <img src="https://i.postimg.cc/63X711mt/1749460061178-2.jpg" alt="Photo 6 of Anjali" />
+      <img src="https://i.postimg.cc/xjPmBnQ7/1749460064315-2.jpg" alt="Photo 7 of Anjali" />
+      <img src="https://i.postimg.cc/FssS48sK/1749460068260-2.jpg" alt="Photo 8 of Anjali" />
+      <img src="https://i.postimg.cc/YqnWqRhz/1749460072313-2.jpg" alt="Photo 9 of Anjali" />
+      <img src="https://i.postimg.cc/nzGs8Yy7/1749460076842-2.jpg" alt="Photo 10 of Anjali" />
+      <img src="https://i.postimg.cc/7hP5qJ4R/1749460088724-2.jpg" alt="Photo 11 of Anjali" />
+      <img src="https://i.postimg.cc/90xr0XFQ/1749460094877-2.jpg" alt="Photo 12 of Anjali" />
+      <img src="https://i.postimg.cc/8kwFt4Bg/1749460098015-2.jpg" alt="Photo 13 of Anjali" />
+      <img src="https://i.postimg.cc/MHhJdg9Y/1749460125438.jpg" alt="Photo 14 of Anjali" />
+      <img src="https://i.postimg.cc/hGqPSQb0/Screenshot-20250609-145230-2.png" alt="Photo 15 of Anjali" />
+      
       <div>
         <button onclick="prevPhoto()" aria-label="Previous photo">⟨</button>
         <button onclick="nextPhoto()" aria-label="Next photo">⟩</button>
@@ -180,20 +188,13 @@
       <button onclick="showMessageAndHearts()" aria-haspopup="true" aria-controls="secretMessage">
         Click to Reveal Surprise
       </button>
-  
-          
-  
-   <button>   <a href="music.html">🎵</a></button>
-      <div>
-    
- 
-    </div>
-    
 
-    <p id="secretMessage" role="region" aria-live="polite" aria-atomic="true"></p>
+      
+      <p id="secretMessage" role="region" aria-live="polite" aria-atomic="true"></p>
+    </div>
 
     <div class="footer">
-      Made with love just for you, Anjali 💕
+      Made with love just for you, Manu 💕
     </div>
   </div>
 
@@ -210,18 +211,27 @@
     function nextPhoto() {
       currentPhoto = (currentPhoto + 1) % photos.length;
       showPhoto(currentPhoto);
+      resetAutoSlide();
     }
 
     function prevPhoto() {
       currentPhoto = (currentPhoto - 1 + photos.length) % photos.length;
       showPhoto(currentPhoto);
+      resetAutoSlide();
     }
 
+    function resetAutoSlide() {
+      clearInterval(autoSlide);
+      autoSlide = setInterval(nextPhoto, 5000);
+    }
+
+    let autoSlide = setInterval(nextPhoto, 5000);
+
     function showMessageAndHearts() {
-      const message = "Anjali, you are my Best-Friend.💛 I think I again can't find your type of Friend!! I love you more each day My Dear-Best-Friend💛️";
+      const message = "Manu, I think I again can't find your type of Love❤️ !! I love you more each day My Dear Manu💝";
       const secret = document.getElementById('secretMessage');
       secret.style.display = 'block';
-      secret.innerText = ''; // Clear message for typing
+      secret.innerText = '';
 
       let index = 0;
       const typing = setInterval(() => {
@@ -235,7 +245,7 @@
         heart.className = 'falling-heart';
         heart.style.left = Math.random() * 100 + 'vw';
         heart.style.animationDuration = (2 + Math.random() * 3) + 's';
-        heart.innerText = '💛❤️';
+        heart.innerText = '💖❤️';
         document.body.appendChild(heart);
         setTimeout(() => heart.remove(), 5000);
       }
